@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Wellfleet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&family=Wellfleet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&family=Wellfleet&display=swap");
+
+.header {
+  padding-left: 180px;
+}
+
+.header-content-left {
+  width: 50%;
+  margin-top: 50px;
+} 
+
+.header-heading {
+  font-family: "Dancing Script";
+  font-size: 100px;
+}
+
+.comfortaa {
+  font-family: "comfortaa";
+}
+
+.book-a-table {
+  padding: 10px;
+  font-family: "Comfortaa";
+  font-size: 15px;
+  border: 2px solid white;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.book-a-table:hover {
+  letter-spacing: 2px;
+  color: yellow;
+  border: 2px solid yellow;
+  box-shadow: 0 0 5px yellow;
+  background-color: #111;
+  cursor: pointer;
+}
+
+.header-image {
+  width: 300px;
+  float: right;
+  margin-top: -420px;
+  margin-right: 220px;
+  border: 2px solid white;
+  border-radius: 0 20px;
+  position: relative;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.sq {
+  float: right;
+  width: 100px;
+  height: 200px;
+  background-color: yellow;
+  z-index: 0;
+  border-radius: 0px 20px;
+}
+
+.sq-1 {
+  margin-top: -430px;
+  margin-right: -310px;
+}
+
+.sq-2 {
+  margin-right: -90px;
+  margin-top: -162px;
+}
+
+.hover-container {
+  transition: 0.5s;
+}
+
+.hover-container:hover {
+  margin-top: 10px;
+  margin-right: 15px;
+  transform: scale(1.05);
+}

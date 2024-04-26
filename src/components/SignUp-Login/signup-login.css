@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Wellfleet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&family=Wellfleet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&family=Wellfleet&display=swap");
+
+.signup {
+    background-color: white;
+    margin-top: 60px;
+    margin-right: 800px;
+    margin-left: 200px;
+    background: linear-gradient(rgba(0.3,0.3,0.3,0.3), rgba(0.3,0.3,0.3,0.3));
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.login {
+    background-color: white;
+    margin-top: -465px;
+    margin-right: 200px;
+    margin-left: 800px;
+    background: linear-gradient(rgba(0.3,0.3,0.3,0.3), rgba(0.3,0.3,0.3,0.3));
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 465px;
+    padding-top: 20px;
+    margin-bottom: 10px
+}
+
+#heading {
+    font-family: "Dancing Script";
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+#heading1 {
+    font-family: "Dancing Script";
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-top: 0px;
+}
+
+.content1 {
+    margin-left: 165px;
+    margin-top: 50px;
+}
+
+.input {
+    padding: 10px;
+    background: linear-gradient(rgba(0.3,0.3,0.3,0.3), rgba(0.3,0.3,0.3,0.3));
+    font-weight: bold;
+    color: white;
+    font-family: "Wellfleet";
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#confirm-password {
+    padding: 10px;
+    background: linear-gradient(rgba(0.3,0.3,0.3,0.3), rgba(0.3,0.3,0.3,0.3));
+    font-weight: bold;
+    color: white;
+    font-family: "Wellfleet";
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#confirm-password1 {
+    padding: 10px;
+    background: linear-gradient(rgba(0.3,0.3,0.3,0.3), rgba(0.3,0.3,0.3,0.3));
+    font-weight: bold;
+    color: white;
+    font-family: "Wellfleet";
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px
+}
+
+#submit {
+    margin-left: 220px;
+    margin-top: 10px;
+    background: linear-gradient(rgba(0.3,0.3,0.3,0.3), rgba(0.3,0.3,0.3,0.3));
+    color: white;
+    font-family: "Wellfleet";
+    border-color: white;
+    margin-bottom: 30px;
+}
+
+#submit1 {
+    margin-left: 220px;
+    margin-top: 10px;
+    background: linear-gradient(rgba(0.3,0.3,0.3,0.3), rgba(0.3,0.3,0.3,0.3));
+    color: white;
+    font-family: "Wellfleet";
+    border-color: white;
+    margin-bottom: 20px;
+}
+
+label {
+    color: white;
+    font-family: "Wellfleet";
+}
+
+#message{ 
+    color: white;
+    font-family: "Wellfleet";
+    margin-top: 1px;
+    font-size: 12px;
+}
+
+#message1{ 
+    color: white;
+    font-family: "Wellfleet";
+    margin-top: 1px;
+    font-size: 12px;
+}
+
+#submit:hover {
+    color: yellow;
+    border-color: yellow;
+    cursor: pointer;
+}
+
+#submit1:hover {
+    color: yellow;
+    border-color: yellow;
+    cursor: pointer;
+}
+
+.input:hover {
+    border-color: yellow;
+}
+
+
+#confirm-password:hover {
+    border-color: yellow
+}
+
+#confirm-password1:hover {
+    border-color: yellow
+}
+
+.login:hover {
+    border-color: yellow;
+}
+
+.signup:hover {
+    border-color: yellow;
+}
+
+span {
+    font-size: 12px;
+    color: red;
+    font-family: 'Comfortaa';
+    display: block;
+}

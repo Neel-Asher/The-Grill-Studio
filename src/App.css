@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Wellfleet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&family=Wellfleet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&family=Wellfleet&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  font-family: "Wellfleet";
+}
+
+body {
+  background-color: #111;
+  height: 100vh;
+  background: #111 url(../public/images/Background/body-bg.jpg) no-repeat center center/cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}

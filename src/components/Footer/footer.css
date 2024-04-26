@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Wellfleet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&family=Wellfleet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&family=Wellfleet&display=swap");
+
+
+.footer-header {
+    font-family: 'Dancing Script';
+    padding-bottom: 15px;
+    font-size: 40px;
+}
+
+.left-header {
+    font-family: 'Dancing Script';
+    padding-bottom: 15px;
+}
+
+.right-header {
+    font-family: 'Dancing Script';
+    padding-bottom: 15px;
+}
+
+.left-text {
+    font-family: 'Comfortaa';
+}
+
+.right-text {
+    font-family: 'Comfortaa';
+}
+
+.center-text {
+    font-family: 'Comfortaa';
+}
+
+.footer {
+    border-top: 2px solid white;
+    margin-top: 100px;
+    background: linear-gradient(
+    rgba(0.3, 0.3, 0.3, 0.3),
+    rgba(0.3, 0.3, 0.3, 0.3)
+  );
+}
+
+.footer:hover {
+    border-color: yellow;
+}
+
+.footer-left {
+    float: left;
+    width: 33%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.footer-right {
+    float: left;
+    width: 33%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.footer-center {
+    float: left;
+    width: 33%;text-align: center;
+    margin-bottom: 50px;
+}

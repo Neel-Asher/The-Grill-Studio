@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Wellfleet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&family=Wellfleet&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Sedan:ital@0;1&family=Wellfleet&display=swap");
+
+#ContactUs {
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 0px;
+    background: linear-gradient(rgba(0.3,0.3,0.3,0.3), rgba(0.3,0.3,0.3,0.3));  
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#heading {
+    font-family: "Dancing Script";
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+#content {
+    padding: 15px;
+    padding-bottom: 50px;
+}
+
+.icon {
+    border-radius: 15px;
+    width: 50px;
+    float: left;
+    padding: 2px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+a {
+    margin-top: 0px;
+    font-family: "Dancing Script";
+    font-size: 40px;
+}
+
+a:hover{
+    color: yellow;
+}
+
+#ContactUs:hover {
+    border-color: yellow;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+#heading:hover {
+    color: yellow;
+}
+
+.icontxt:hover {
+    cursor: pointer;
+}
