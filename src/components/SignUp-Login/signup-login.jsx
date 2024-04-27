@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import axios from "axios"
 import './signup-login.css';
+import { useNavigate } from "react-router-dom";
 
 const SignUp_Login = () => {
     const emailPattern = /\S+@\S+\.\S+/;
@@ -21,7 +23,7 @@ const SignUp_Login = () => {
         }
     )
 
-    const handleSignSubmit = e => {
+    async function handleSignSubmit(e) {
         e.preventDefault()
         const signName = document.getElementById('username').value;
         const signEmail = document.getElementById('email').value;
@@ -29,68 +31,87 @@ const SignUp_Login = () => {
         const signCpword = document.getElementById('confirm-password').value;
         if (signName === '') {
             alert("Username is required");
-        }
-        else {
-            alert(`Namaste ${signName} ji`);
+            return;
         }
         if (signEmail === '') {
             alert("Email is required");
+            return;
         }
         else if (!emailPattern.test(signEmail)) {
             alert(`${signEmail} is not a valid email format`);
-        }
-        else {
-            alert(`Email acquired: ${signEmail}`);
+            return;
         }
         if (signPword === '') {
             alert("Password required");
+            return;
         }
         else if (signPword.length < 6) {
             alert(`password needs to be atleast 6 characters long`);
+            return;
         }
-        else {
-            alert(`${signPword} badhiya hai guru`);
+        if (signPword !== signCpword) {
+            alert("Passwords do not match");
+            return;
         }
-        if (signPword === signCpword) {
-            alert("Password ekdum pakka hai tumra");
-        }
-        else {
-            alert("Arre re re password match na ho raha bhaiya");
-        }
+        await axios.post("http://localhost:3000/#SignUp", {signName, signEmail, signPword})
+        .then(res=>{
+            if(res.data="exist"){
+                alert("Account already exists")
+            }
+            else if(res.data="notexist"){
+                alert("User has signed up")
+            }
+            else {
+                alert("Error")
+            }
+        })
+        .catch(e=>{
+            console.log(e)
+        })
     }
 
-    const handleLogSubmit = e => {
+    async function handleLogSubmit(e) {
         e.preventDefault()
         const logName = document.getElementById('username').value;
         const logPword = document.getElementById('password1').value;
         const logCpword = document.getElementById('confirm-password1').value;
         if (logName === '') {
-            alert("Bhaiyaji naam ka hai tumra?");
-        }
-        else {
-            alert(`Namaste ${logName} ji`);
+            alert("Username is required");
+            return;
         }
         if (logPword === '') {
-            alert("Password ke bina hi account banana hai wah wah");
+            alert("Password is required");
+            return;
         }
         else if (logPword.length < 6) {
-            alert(`${logPword} bara hi kamzor password hai`);
+            alert(`Password needs to be atleast 6 characters long`);
+            return;
         }
-        else {
-            alert(`${logPword} badhiya hai guru`);
+        if (logPword !== logCpword) {
+            alert("Passwords do not match");
+            return;
         }
-        if (logPword === logCpword) {
-            alert("Password ekdum pakka hai tumra");
-        }
-        else {
-            alert("Arre re re password match na ho raha bhaiya");
-        }
+        await axios.post("http://localhost:3000/#Login", {logName, logPword})
+        .then(res=>{
+            if(res.data="exist"){
+                alert("Logged in")
+            }
+            else if(res.data="notexist"){
+                alert("User has not signed up")
+            }
+            else {
+                alert("Error")
+            }
+        })
+        .catch(e=>{
+            console.log(e)
+        })
     }
 
     return (
         <div className="signup_login">
             <div className="signup"  id="SignUp">
-                <form onSubmit={handleSignSubmit}>
+                <form action="POST" onSubmit={handleSignSubmit}>
                     <h1 id="heading">Sign up</h1>
                     <div className="content1">
                         <label for="username"> Name: </label><br/>
@@ -108,7 +129,7 @@ const SignUp_Login = () => {
                 </form>
             </div>
             <div className="login" id="Login">
-                <form onSubmit={handleLogSubmit}>
+                <form action="POST" onSubmit={handleLogSubmit}>
                     <h1 id="heading1">Login</h1>
                     <div className="content1">
                         <label for="username1"> Name: </label><br/>
