@@ -12,45 +12,43 @@ const atlasUri = "mongodb+srv://neelasher20:E205Vallabh#@cluster0.sv8fs7h.mongod
 
 // Connect to MongoDB Atlas
 mongoose.connect(atlasUri, {})
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.log(err));
 
-  // Movie Rating Schema
-const movieRatingSchema = new mongoose.Schema({
-  imageUrl: String,
-  movieName: String,
-  review: String,
-  rating: Number,
+// User Schema
+const userSchema = new mongoose.Schema({
+    username: String,
+    email: String,
+    password: String,
 });
 
-const MovieRating = mongoose.model('MovieRating', movieRatingSchema);
+const User = mongoose.model('User', userSchema);
 
 // API routes
-app.get('/api/ratings', async (req, res) => {
-  try {
-    const ratings = await MovieRating.find();
-    res.json(ratings);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
+app.get('/api/users', async (req, res) => {
+    try {
+        const users = await User.find();
+        res.json(users);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
 });
 
-app.post('/api/ratings', async (req, res) => {
-  const rating = new MovieRating({
-    imageUrl: req.body.imageUrl,
-    movieName: req.body.movieName,
-    review: req.body.review,
-    rating: req.body.rating,
-  });
+app.post('/api/users', async (req, res) => {
+    const user = new User({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+    });
 
-  try {
-    const newRating = await rating.save();
-    res.status(201).json(newRating);
-  } catch (err) {
-    res.status(400).json({ message: err.message });
-  }
+    try {
+        const newUser = await user.save();
+        res.status(201).json(newUser);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
 });
 
 // Start the server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+app.listen(PORT, () => console.log("Server started on port ${PORT}"));
